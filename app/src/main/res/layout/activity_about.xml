@@ -32,7 +32,7 @@
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/ic_profile"
                 android:contentDescription="@string/app_name"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="24dp" />
