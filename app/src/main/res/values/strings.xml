@@ -1,3 +1,83 @@
 <resources>
-    <string name="app_name">Project_Tugas_Android_Akhir</string>
+    <string name="app_name">Ninda App</string>
+    
+    <!-- Login -->
+    <string name="login_title">Welcome to Ninda App</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="login_error">Username atau Password salah!</string>
+    <string name="login_empty">Username dan Password tidak boleh kosong!</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_students">Students</string>
+    <string name="nav_profile">Profile</string>
+    
+    <!-- Home -->
+    <string name="welcome">Selamat Datang</string>
+    <string name="weather_title">Cuaca Hari Ini</string>
+    <string name="temperature">Suhu</string>
+    <string name="loading_weather">Memuat data cuaca...</string>
+    <string name="weather_error">Gagal memuat cuaca</string>
+    <string name="calculator">Kalkulator Luas</string>
+    <string name="ticket_booking">Pesan Tiket</string>
+    
+    <!-- Students -->
+    <string name="students_title">Data Mahasiswa</string>
+    <string name="add_student">Tambah Mahasiswa</string>
+    <string name="nim">NIM</string>
+    <string name="nama">Nama</string>
+    <string name="jurusan">Jurusan</string>
+    <string name="save">Simpan</string>
+    <string name="cancel">Batal</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Hapus</string>
+    <string name="delete_confirm">Hapus data mahasiswa ini?</string>
+    <string name="empty_students">Belum ada data mahasiswa</string>
+    <string name="student_added">Data mahasiswa berhasil ditambahkan</string>
+    <string name="student_updated">Data mahasiswa berhasil diupdate</string>
+    <string name="student_deleted">Data mahasiswa berhasil dihapus</string>
+    <string name="nim_exists">NIM sudah terdaftar!</string>
+    <string name="fill_all_fields">Mohon isi semua field!</string>
+    
+    <!-- Profile -->
+    <string name="profile_title">Profil Saya</string>
+    <string name="dark_mode">Mode Gelap</string>
+    <string name="about_app">Tentang Aplikasi</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirm">Yakin ingin keluar?</string>
+    
+    <!-- About -->
+    <string name="about_title">Tentang Ninda App</string>
+    <string name="app_version">Versi 1.0</string>
+    <string name="developer">Developer: Aninda Puspitasari</string>
+    <string name="app_description">Ninda App adalah aplikasi manajemen kampus yang mengintegrasikan berbagai fitur seperti manajemen data mahasiswa, informasi cuaca, kalkulator, dan pemesanan tiket event.</string>
+    <string name="features_title">Fitur Aplikasi:</string>
+    <string name="feature_1">• Manajemen Data Mahasiswa (CRUD)</string>
+    <string name="feature_2">• Informasi Cuaca Real-time</string>
+    <string name="feature_3">• Kalkulator Luas Persegi Panjang</string>
+    <string name="feature_4">• Sistem Pemesanan Tiket</string>
+    <string name="feature_5">• Dark Mode</string>
+    <string name="feature_6">• Autentikasi Login</string>
+    
+    <!-- Calculator -->
+    <string name="calculator_title">Kalkulator Luas</string>
+    <string name="panjang">Panjang</string>
+    <string name="lebar">Lebar</string>
+    <string name="hitung">Hitung</string>
+    <string name="hasil">Hasil</string>
+    <string name="luas_result">Luas = %1$s</string>
+    <string name="input_empty">Panjang dan Lebar tidak boleh kosong!</string>
+    
+    <!-- Ticket -->
+    <string name="ticket_title">Pemesanan Tiket</string>
+    <string name="event_name">Event Kampus 2025</string>
+    <string name="ticket_name">Nama Pemesan</string>
+    <string name="ticket_quantity">Jumlah Tiket</string>
+    <string name="order_ticket">Pesan Tiket</string>
+    <string name="processing">Memproses pesanan...</string>
+    <string name="ticket_success">Tiket atas nama %1$s berhasil dipesan</string>
+    <string name="ticket_detail">Detail Pesanan:\nNama: %1$s\nJumlah: %2$s tiket</string>
+    <string name="ok">OK</string>
 </resources>
