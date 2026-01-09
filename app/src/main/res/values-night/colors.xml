@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Semantic Colors Override for Dark Mode -->
+    <color name="color_background">@color/background_dark</color>
+    <color name="color_surface">@color/card_background_dark</color>
+    <color name="text_main">@color/text_primary_dark</color>
+    <color name="text_secondary">@color/text_secondary_dark</color>
+    
+    <!-- We don't override 'white' or 'black' directly as they are used for fixed contrast elements -->
+</resources>
