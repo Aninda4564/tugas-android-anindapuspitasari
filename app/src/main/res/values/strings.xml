@@ -3,6 +3,7 @@
     
     <!-- Login -->
     <string name="login_title">Welcome to Ninda App</string>
+    <string name="login_welcome">Silakan login untuk melanjutkan</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -80,4 +81,17 @@
     <string name="ticket_success">Tiket atas nama %1$s berhasil dipesan</string>
     <string name="ticket_detail">Detail Pesanan:\nNama: %1$s\nJumlah: %2$s tiket</string>
     <string name="ok">OK</string>
+
+    <!-- Google Maps -->
+    <string name="google_maps_key">AIzaSyD4E5aIRd8fwrsFvYYk32U-FRsdkfd708w</string>
+    <string name="title_activity_maps">Lokasi Kampus</string>
+    <string name="map_type_normal">Normal</string>
+    <string name="map_type_satellite">Satelit</string>
+    <string name="map_type_terrain">Terrain</string>
+    <string name="address_placeholder">Klik peta untuk melihat alamat...</string>
+    <string name="address_title">Alamat Terpilih</string>
+    <string name="getting_address">Sedang mengambil alamat...</string>
+    <string name="location_permission_needed">Izin lokasi diperlukan untuk fitur ini</string>
+
+    <string name="default_notification_channel_id">default_channel</string>
 </resources>

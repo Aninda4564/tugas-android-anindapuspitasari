@@ -111,6 +111,10 @@ class HomeFragment : Fragment() {
         binding.buttonTicket.setOnClickListener {
             startActivity(Intent(requireContext(), TicketActivity::class.java))
         }
+
+        binding.buttonMaps.setOnClickListener {
+            startActivity(Intent(requireContext(), com.latihan.project_tugas_android_akhir.MapsActivity::class.java))
+        }
     }
     
     override fun onDestroyView() {

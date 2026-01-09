@@ -41,4 +41,10 @@
     <color name="card_background_dark">#2C2C2C</color>
     <color name="divider_light">#E0E0E0</color>
     <color name="divider_dark">#424242</color>
+
+    <!-- Semantic Colors (Use these in Layouts) -->
+    <color name="color_background">@color/background_light</color>
+    <color name="color_surface">@color/white</color>
+    <color name="text_main">@color/text_primary_light</color>
+    <color name="text_secondary">@color/text_secondary_light</color>
 </resources>

@@ -3,16 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/color_background">
 
-    <!-- Toolbar -->
+    <!-- Gradient Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/primary"
+        android:background="@drawable/bg_gradient_primary"
         android:elevation="4dp"
         app:titleTextColor="@color/white"
+        app:navigationIconTint="@color/white"
         app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel" />
 
     <!-- Content -->
@@ -28,56 +30,81 @@
             android:padding="24dp"
             android:gravity="center_horizontal">
 
-            <!-- Logo -->
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:src="@mipmap/ic_profile"
-                android:contentDescription="@string/app_name"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="24dp" />
+            <!-- Profile Image -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="70dp"
+                app:cardElevation="8dp"
+                app:strokeColor="@color/primary"
+                app:strokeWidth="4dp">
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/profile_aninda"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop" />
+            </com.google.android.material.card.MaterialCardView>
 
             <!-- App Name -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Aninda App"
-                android:textSize="28sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:textColor="@color/primary"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="4dp" />
 
             <!-- Version -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="versi 7.0"
+                android:text="Version 7.0.0"
                 android:textSize="14sp"
-                android:textColor="@color/text_secondary_light"
-                android:layout_marginBottom="24dp" />
+                android:textStyle="bold"
+                android:textColor="@color/secondary"
+                android:background="@drawable/bg_input_rounded"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginBottom="32dp" />
 
             <!-- Description Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="8dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/card_background_light">
+                app:cardBackgroundColor="@color/color_surface">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tentang Aplikasi"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_main"
+                        android:layout_marginBottom="12dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/app_description"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary_light"
-                        android:lineSpacingExtra="4dp" />
+                        android:textSize="15sp"
+                        android:textColor="@color/text_secondary"
+                        android:lineSpacingExtra="6dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -85,83 +112,83 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="8dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/card_background_light">
+                app:cardBackgroundColor="@color/white">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="24dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/features_title"
-                        android:textSize="16sp"
+                        android:text="Fitur Utama"
+                        android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@color/text_primary_light"
-                        android:layout_marginBottom="12dp" />
+                        android:textColor="@color/text_main"
+                        android:layout_marginBottom="16dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/feature_1"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary_light"
-                        android:layout_marginBottom="4dp" />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/feature_2"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary_light"
-                        android:layout_marginBottom="4dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="✅ Login Authentication"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="15sp" />
+                        
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="✅ Student Data Management"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="15sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/feature_3"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary_light"
-                        android:layout_marginBottom="4dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="✅ Weather Forecast Integration"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="15sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/feature_4"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary_light"
-                        android:layout_marginBottom="4dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="✅ Ticket Booking System"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="15sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/feature_5"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary_light"
-                        android:layout_marginBottom="4dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="✅ Area Calculator"
+                            android:layout_marginBottom="8dp"
+                            android:textSize="15sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/feature_6"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary_light" />
+                         <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="✅ Modern &amp; Responsive UI"
+                            android:textSize="15sp" />
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Developer -->
+            <!-- Copyright -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/developer"
-                android:textSize="14sp"
+                android:text="© 2025 Aninda App. All rights reserved."
+                android:textSize="13sp"
                 android:textColor="@color/text_secondary_light"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="8dp" />
 
         </LinearLayout>
     </ScrollView>

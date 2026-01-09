@@ -11,11 +11,7 @@ class LoginActivity : AppCompatActivity() {
     
     private lateinit var binding: ActivityLoginBinding
     private lateinit var preferencesManager: PreferencesManager
-    
-    companion object {
-        private const val VALID_USERNAME = "aninda"
-        private const val VALID_PASSWORD = "aninda123"
-    }
+    private lateinit var auth: com.google.firebase.auth.FirebaseAuth
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,32 +19,43 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         
         preferencesManager = PreferencesManager.getInstance(this)
+        auth = com.google.firebase.auth.FirebaseAuth.getInstance()
         
         setupListeners()
     }
     
     private fun setupListeners() {
         binding.buttonLogin.setOnClickListener {
-            val username = binding.editTextUsername.text.toString().trim()
+            val email = binding.editTextUsername.text.toString().trim() // Using email as username
             val password = binding.editTextPassword.text.toString().trim()
             
-            when {
-                username.isEmpty() || password.isEmpty() -> {
-                    Toast.makeText(this, R.string.login_empty, Toast.LENGTH_SHORT).show()
-                }
-                username == VALID_USERNAME && password == VALID_PASSWORD -> {
-                    // Login berhasil
-                    preferencesManager.saveLoginStatus(true)
-                    preferencesManager.saveUsername(username)
-                    
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-                else -> {
-                    Toast.makeText(this, R.string.login_error, Toast.LENGTH_SHORT).show()
-                }
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, R.string.login_empty, Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
+
+            // Firebase Login
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success
+                        val user = auth.currentUser
+                        preferencesManager.saveLoginStatus(true)
+                        preferencesManager.saveUsername(user?.displayName ?: email)
+                        
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Toast.makeText(baseContext, "Login Gagal: ${task.exception?.message}",
+                            Toast.LENGTH_SHORT).show()
+                    }
+                }
+        }
+
+        binding.tvRegisterLink.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 }

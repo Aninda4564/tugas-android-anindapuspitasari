@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -56,6 +57,15 @@ dependencies {
     
     // Splash Screen
     implementation("androidx.core:core-splashscreen:1.0.1")
+
+    // Google Maps & Location
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+
+    // Firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.messaging)
     
     // Fragment
     implementation("androidx.fragment:fragment-ktx:1.6.2")
