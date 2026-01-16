@@ -4,7 +4,8 @@
     <!-- Login -->
     <string name="login_title">Welcome to Ninda App</string>
     <string name="login_welcome">Silakan login untuk melanjutkan</string>
-    <string name="username">Username</string>
+    <string name="username">Email</string>
+    <string name="invalid_email">Format email tidak valid!</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="login_error">Username atau Password salah!</string>
@@ -92,6 +93,19 @@
     <string name="address_title">Alamat Terpilih</string>
     <string name="getting_address">Sedang mengambil alamat...</string>
     <string name="location_permission_needed">Izin lokasi diperlukan untuk fitur ini</string>
+
+    <!-- Materi -->
+    <string name="btn_lihat_materi">Lihat Materi</string>
+    <string name="materi_title">Materi Pembelajaran</string>
+    <string name="materi_pertemuan_1">Pertemuan 1: Hello World</string>
+    <string name="materi_desc_1">Belajar membuat aplikasi Android pertama dengan menampilkan pesan "Hello World" di layar.</string>
+    <string name="materi_pertemuan_2">Pertemuan 2: Runtutan Aritmatika</string>
+    <string name="materi_desc_2">Memahami dasar-dasar variabel, tipe data, dan operasi aritmatika dalam pemrograman Kotlin.</string>
+    <string name="materi_pertemuan_3">Pertemuan 3: Fungsi Button</string>
+    <string name="materi_desc_3">Belajar menangani interaksi user dengan komponen Button menggunakan SetOnClickListener.</string>
+    <string name="materi_pertemuan_4">Pertemuan 4: Layout &amp; Input</string>
+    <string name="materi_desc_4">Mempelajari cara menyusun tata letak (Layout) dan menerima input dari User menggunakan EditText.</string>
+    <string name="btn_selesai">Selesai</string>
 
     <string name="default_notification_channel_id">default_channel</string>
 </resources>

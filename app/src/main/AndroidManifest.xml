@@ -56,6 +56,16 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         
+        <!-- Materi Activity -->
+        <activity
+            android:name=".MateriActivity"
+            android:exported="false" />
+            
+        <!-- Demo Activities -->
+        <activity android:name=".DemoPertemuan1Activity" android:exported="false" />
+        <activity android:name=".DemoPertemuan2Activity" android:exported="false" />
+        <activity android:name=".DemoPertemuan3Activity" android:exported="false" />
+        <activity android:name=".DemoPertemuan4Activity" android:exported="false" />
         <!-- About Activity -->
         <activity
             android:name=".AboutActivity"

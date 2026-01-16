@@ -31,10 +31,13 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         
         preferencesManager = PreferencesManager.getInstance(requireContext())
+        val currentUser = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser
         
-        // Display username
-        val username = preferencesManager.getUsername()
-        binding.textViewUsername.text = username
+        // Display user info from Firebase or Preferences as fallback
+        val displayName = currentUser?.displayName ?: preferencesManager.getUsername()
+        val email = currentUser?.email ?: ""
+        
+        binding.textViewUsername.text = if (email.isNotEmpty()) "$displayName\n($email)" else displayName
         
         // Set dark mode switch
         binding.switchDarkMode.isChecked = preferencesManager.isDarkMode()

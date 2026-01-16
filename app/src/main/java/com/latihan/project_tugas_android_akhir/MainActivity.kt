@@ -89,7 +89,12 @@ class MainActivity : AppCompatActivity() {
             .setTitle(R.string.logout)
             .setMessage(R.string.logout_confirm)
             .setPositiveButton(R.string.ok) { _, _ ->
+                // Sign out from Firebase
+                com.google.firebase.auth.FirebaseAuth.getInstance().signOut()
+                
+                // Clear local preferences
                 preferencesManager.clearAll()
+                
                 val intent = Intent(this, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)

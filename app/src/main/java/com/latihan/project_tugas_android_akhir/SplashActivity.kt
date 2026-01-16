@@ -28,13 +28,13 @@ class SplashActivity : AppCompatActivity() {
     }
     
     private fun checkLoginStatus() {
-        val isLoggedIn = preferencesManager.isLoggedIn()
+        val currentUser = com.google.firebase.auth.FirebaseAuth.getInstance().currentUser
         
-        val intent = if (isLoggedIn) {
-            // User sudah login, langsung ke MainActivity
+        val intent = if (currentUser != null) {
+            // User sudah login di Firebase, langsung ke MainActivity
             Intent(this, MainActivity::class.java)
         } else {
-            // User belum login, ke LoginActivity
+            // User belum login atau session habis, ke LoginActivity
             Intent(this, LoginActivity::class.java)
         }
         

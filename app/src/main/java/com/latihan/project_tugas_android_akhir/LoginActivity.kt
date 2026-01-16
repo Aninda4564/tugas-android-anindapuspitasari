@@ -34,6 +34,11 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, R.string.invalid_email, Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             // Firebase Login
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
@@ -56,6 +61,10 @@ class LoginActivity : AppCompatActivity() {
 
         binding.tvRegisterLink.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
+        }
+
+        binding.buttonLihatMateri.setOnClickListener {
+            startActivity(Intent(this, MateriActivity::class.java))
         }
     }
 }
